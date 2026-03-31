@@ -3,6 +3,10 @@
     {
       "source": "/design-courses-delhi/:path*",
       "destination": "https://insd-generic.vercel.app/design-courses-delhi/:path*"
+    },
+    {
+      "source": "/graphic-design-course/:path*",
+      "destination": "https://insd-graphic-design.vercel.app/graphic-design-course/:path*"
     }
   ]
 }
