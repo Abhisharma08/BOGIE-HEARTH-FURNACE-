@@ -181,6 +181,28 @@ export default function LandingPage() {
       </div>
     </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     {/* SECTION 2 — PRODUCT INTRODUCTION */}
 <section className="py-24 bg-white w-full">
   <div className="container mx-auto max-w-7xl px-4">
@@ -201,12 +223,6 @@ export default function LandingPage() {
 
       {/* RIGHT CONTENT */}
       <div className="space-y-8">
-        
-        {/* EYEBROW */}
-        <div className="inline-flex rounded-full border border-primary/20 bg-primary/10 px-5 py-2 text-sm font-semibold text-primary">
-          Product Introduction
-        </div>
-
         {/* HEADING */}
         <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary">
           What Is a Bogie Hearth Furnace — And Why Do Heavy Industries Rely on It?
