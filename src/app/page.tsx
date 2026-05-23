@@ -17,6 +17,17 @@ import {
   Wrench,
   Cpu,
   BarChart3,
+  MoveHorizontal,
+  PencilRuler,
+  Cog,
+  Car,
+  Home,
+  Drill,
+  Trophy,
+  BadgeCheck,
+  Leaf,
+  MapPin,
+
 } from "lucide-react"
 import LeadForm from "@/components/LeadForm"
 import SectionHeader from "@/components/SectionHeader"
@@ -54,7 +65,7 @@ export default function LandingPage() {
   </div> */}
 
 {/* NAVBAR */}
-<nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-700/95 backdrop-blur-md overflow-x-hidden">
+<nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-white backdrop-blur-md overflow-x-hidden">
   <div className="container mx-auto flex h-16 md:h-24 max-w-7xl items-center justify-between px-4">
     
     {/* LEFT */}
@@ -181,28 +192,6 @@ export default function LandingPage() {
       </div>
     </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     {/* SECTION 2 — PRODUCT INTRODUCTION */}
 <section className="py-24 bg-white w-full">
   <div className="container mx-auto max-w-7xl px-4">
@@ -315,42 +304,42 @@ export default function LandingPage() {
     {/* FEATURES GRID */}
     <div className="mt-16 grid grid-cols-1 gap-7 md:grid-cols-2 xl:grid-cols-3">
       {[
-        {
-          icon: "🔧",
-          title: "Movable Bogie Hearth",
-          subtitle: "The defining feature that makes heavy heat treatment possible",
-          desc: "Car-bottom type bogie runs on heavy-duty wheels for smooth, effortless movement. Enables easy loading and unloading of bulky components using overhead crane or trolley — zero manual handling risk.",
-        },
-        {
-          icon: "🔥",
-          title: "Flexible Heating Modes",
-          subtitle: "Run on the fuel your plant already uses",
-          desc: "Available in Gas, Oil, or Electrical heating systems. Each configuration is designed for maximum fuel efficiency and consistent performance across long production cycles.",
-        },
-        {
-          icon: "🏗️",
-          title: "Rugged Construction",
-          subtitle: "Built for continuous industrial use, not occasional batch runs",
-          desc: "Fabricated from heavy-duty MS structure with reinforced frames. High-quality refractory lining and ceramic fibre insulation minimise heat loss and extend furnace operational life significantly.",
-        },
-        {
-          icon: "📊",
-          title: "Temperature Control & Uniformity",
-          subtitle: "±5°C across the entire chamber — every cycle",
-          desc: "Automatic digital/PLC-based temperature controllers with thermocouple feedback. Multiple burners/heating elements ensure ±5°C temperature uniformity — critical for stress relieving and annealing of precision components.",
-        },
-        {
-          icon: "🛡️",
-          title: "Safety & Reliability",
-          subtitle: "Engineered for long service life with minimal downtime",
-          desc: "Robust bogie sealing system prevents heat leakage around the chamber door. Designed for long service life with minimal maintenance requirements — reducing your total cost of ownership.",
-        },
-        {
-          icon: "✏️",
-          title: "Fully Customisable",
-          subtitle: "No standard size. Every furnace is built to your specification.",
-          desc: "Available in a wide range of sizes and capacities as per customer requirements. Furnace design tailored for your specific load size, capacity, process, and industrial application — including inert gas purging provision.",
-        },
+  {
+    icon: MoveHorizontal,
+    title: "Movable Bogie Hearth",
+    subtitle: "The defining feature that makes heavy heat treatment possible",
+    desc: "Car-bottom type bogie runs on heavy-duty wheels for smooth, effortless movement. Enables easy loading and unloading of bulky components using overhead crane or trolley — zero manual handling risk.",
+  },
+  {
+    icon: Flame,
+    title: "Flexible Heating Modes",
+    subtitle: "Run on the fuel your plant already uses",
+    desc: "Available in Gas, Oil, or Electrical heating systems. Each configuration is designed for maximum fuel efficiency and consistent performance across long production cycles.",
+  },
+  {
+    icon: Building2,
+    title: "Rugged Construction",
+    subtitle: "Built for continuous industrial use, not occasional batch runs",
+    desc: "Fabricated from heavy-duty MS structure with reinforced frames. High-quality refractory lining and ceramic fibre insulation minimise heat loss and extend furnace operational life significantly.",
+  },
+  {
+    icon: BarChart3,
+    title: "Temperature Control & Uniformity",
+    subtitle: "±5°C across the entire chamber — every cycle",
+    desc: "Automatic digital/PLC-based temperature controllers with thermocouple feedback. Multiple burners/heating elements ensure ±5°C temperature uniformity — critical for stress relieving and annealing of precision components.",
+  },
+  {
+    icon: ShieldCheck,
+    title: "Safety & Reliability",
+    subtitle: "Engineered for long service life with minimal downtime",
+    desc: "Robust bogie sealing system prevents heat leakage around the chamber door. Designed for long service life with minimal maintenance requirements — reducing your total cost of ownership.",
+  },
+  {
+    icon: PencilRuler,
+    title: "Fully Customisable",
+    subtitle: "No standard size. Every furnace is built to your specification.",
+    desc: "Available in a wide range of sizes and capacities as per customer requirements. Furnace design tailored for your specific load size, capacity, process, and industrial application — including inert gas purging provision.",
+  },
       ].map((item, i) => (
         <Card
           key={i}
@@ -360,8 +349,8 @@ export default function LandingPage() {
           <div className="space-y-6">
             
             {/* ICON */}
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-3xl">
-              {item.icon}
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+              <item.icon className="h-7 w-7 text-primary" strokeWidth={2.2} />
             </div>
 
             {/* TITLE */}
@@ -555,41 +544,41 @@ export default function LandingPage() {
     {/* INDUSTRY CARDS */}
     <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
       {[
-        {
-          icon: "🏭",
-          title: "Foundries & Casting Plants",
-          desc: "Heat treatment of heavy castings post-pour",
-        },
-        {
-          icon: "🔧",
-          title: "Forging & Press Shops",
-          desc: "Pre-heating + post-forging stress relieving",
-        },
-        {
-          icon: "🏗️",
-          title: "Steel Fabrication & Heavy Engineering",
-          desc: "Stress relieving of welded structures and large weldments",
-        },
-        {
-          icon: "⚙️",
-          title: "Metal Processing & Surface Treatment",
-          desc: "Annealing before surface treatment for better adhesion",
-        },
-        {
-          icon: "🚗",
-          title: "Automotive Component Manufacturers",
-          desc: "Large die sets, fixtures, and structural components",
-        },
-        {
-          icon: "🏠",
-          title: "Heat Treatment Contractors",
-          desc: "Batch jobs for multiple clients — flexible capacity configurations",
-        },
-        {
-          icon: "🔩",
-          title: "Tool Rooms & Precision Engineering",
-          desc: "Large dies, jigs, moulds requiring controlled heat treatment",
-        },
+      {
+        icon: Factory,
+        title: "Foundries & Casting Plants",
+        desc: "Heat treatment of heavy castings post-pour",
+      },
+      {
+        icon: Wrench,
+        title: "Forging & Press Shops",
+        desc: "Pre-heating + post-forging stress relieving",
+      },
+      {
+        icon: Building2,
+        title: "Steel Fabrication & Heavy Engineering",
+        desc: "Stress relieving of welded structures and large weldments",
+      },
+      {
+        icon: Cog,
+        title: "Metal Processing & Surface Treatment",
+        desc: "Annealing before surface treatment for better adhesion",
+      },
+      {
+        icon: Car,
+        title: "Automotive Component Manufacturers",
+        desc: "Large die sets, fixtures, and structural components",
+      },
+      {
+        icon: Home,
+        title: "Heat Treatment Contractors",
+        desc: "Batch jobs for multiple clients — flexible capacity configurations",
+      },
+      {
+        icon: Drill,
+        title: "Tool Rooms & Precision Engineering",
+        desc: "Large dies, jigs, moulds requiring controlled heat treatment",
+      },
       ].map((item, i) => (
         <div
           key={i}
@@ -598,8 +587,8 @@ export default function LandingPage() {
           <div className="space-y-5">
 
             {/* ICON */}
-            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10 text-3xl">
-              {item.icon}
+            <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+              <item.icon className="h-7 w-7 text-primary" strokeWidth={2.2} />
             </div>
 
             {/* CONTENT */}
@@ -634,26 +623,26 @@ export default function LandingPage() {
       {/* LEFT STAT BADGES */}
       <div className="space-y-5">
         {[
-          {
-            icon: "🏆",
-            title: "Years in Operation",
-            value: "35+ Since 1987",
-          },
-          {
-            icon: "✅",
-            title: "Quality Certification",
-            value: "ISO 9001:2015 Certified",
-          },
-          {
-            icon: "🌿",
-            title: "Environmental",
-            value: "ISO 14001:2015 Certified",
-          },
-          {
-            icon: "📍",
-            title: "Manufacturing Base",
-            value: "Faridabad, Haryana — Pan-India Installation",
-          },
+        {
+          icon: Trophy,
+          title: "Years in Operation",
+          value: "35+ Since 1987",
+        },
+        {
+          icon: BadgeCheck,
+          title: "Quality Certification",
+          value: "ISO 9001:2015 Certified",
+        },
+        {
+          icon: Leaf,
+          title: "Environmental",
+          value: "ISO 14001:2015 Certified",
+        },
+        {
+          icon: MapPin,
+          title: "Manufacturing Base",
+          value: "Faridabad, Haryana — Pan-India Installation",
+        },
         ].map((item, i) => (
           <div
             key={i}
@@ -662,8 +651,8 @@ export default function LandingPage() {
             <div className="flex items-start gap-4">
 
               {/* ICON */}
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-3xl">
-                {item.icon}
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
+                <item.icon className="h-7 w-7 text-primary" strokeWidth={2.2} />
               </div>
 
               {/* CONTENT */}
@@ -756,9 +745,9 @@ export default function LandingPage() {
         Faridabad, Haryana, India
         <br />
         <br />
-        📧 info@confur.net | confur.india@gmail.com
+         info@confur.net | confur.india@gmail.com
         <br />
-        🌐 www.confur.net
+         www.confur.net
       </p>
     </div>
   </div>
