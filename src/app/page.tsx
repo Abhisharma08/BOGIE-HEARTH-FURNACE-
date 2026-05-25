@@ -33,8 +33,10 @@ import LeadForm from "@/components/LeadForm"
 import SectionHeader from "@/components/SectionHeader"
 
 const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779361354/cropped-Continental-Furnaces-Logo_q8ict4.jpg"
-const HERO_BG_URL = "https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop"
+const HERO_BG_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779695000/WhatsApp_Image_2026-05-21_at_11.22.03_1_mpxnyo.jpg"
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/furnace/1200/900"
+const Img1_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779694498/WhatsApp_Image_2026-05-21_at_11.19.57_pdjsoi.jpg"
+const Img2_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779694675/WhatsApp_Image_2026-05-21_at_11.19.56_2_wfbunz.jpg"
 
 export default function LandingPage() {
   const scrollToLeadForm = () => {
@@ -65,7 +67,7 @@ export default function LandingPage() {
   </div> */}
 
 {/* NAVBAR */}
-<nav className="fixed top-0 w-full z-50 border-b border-white/10 bg-white backdrop-blur-md overflow-x-hidden">
+<nav className="fixed top-0 w-full z-50 border-b border-slate-200 bg-white backdrop-blur-xl overflow-x-hidden">
   <div className="container mx-auto flex h-16 md:h-24 max-w-7xl items-center justify-between px-4">
     
     {/* LEFT */}
@@ -148,18 +150,18 @@ export default function LandingPage() {
         {/* TRUST TILES */}
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 max-w-5xl">
           {[
-            {
-              title: "35 Years of Engineering Trust",
-              icon: "🏆",
-            },
-            {
-              title: "ISO 9001:2015 & 14001:2015 Certified",
-              icon: "✅",
-            },
-            {
-              title: "Custom-Built for Your Load Size & Industry",
-              icon: "⚙️",
-            },
+  {
+    title: "35 Years of Engineering Trust",
+    icon: Trophy,
+  },
+  {
+    title: "ISO 9001:2015 & 14001:2015 Certified",
+    icon: BadgeCheck,
+  },
+  {
+    title: "Custom-Built for Your Load Size & Industry",
+    icon: Cog,
+  },
           ].map((item, i) => (
             <div
               key={i}
@@ -167,8 +169,8 @@ export default function LandingPage() {
             >
               <div className="flex flex-col items-center gap-4">
                 {/* ICON */}
-                <div className="text-4xl leading-none">
-                  {item.icon}
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-primary/10">
+                  <item.icon className="h-8 w-8 text-primary" strokeWidth={2.2} />
                 </div>
 
                 {/* TEXT */}
@@ -201,7 +203,7 @@ export default function LandingPage() {
       <div className="relative">
         <div className="relative overflow-hidden rounded-3xl border border-slate-200 shadow-2xl">
           <Image
-            src={DEFAULT_PLACEHOLDER}
+            src={Img1_SRC}
             alt="Bogie Hearth Furnace"
             width={900}
             height={900}
@@ -385,7 +387,7 @@ export default function LandingPage() {
   <div className="container relative z-10 mx-auto max-w-7xl px-4">
 
     {/* HEADING */}
-    <h2 className="text-3xl md:text-4xl font-bold leading-tight text-secondary">
+    <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary">
       Technical Specifications
     </h2>
 
@@ -464,7 +466,7 @@ export default function LandingPage() {
         {/* IMAGE */}
         <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
           <Image
-            src={DEFAULT_PLACEHOLDER}
+            src={Img2_SRC}
             alt="Continental Bogie Hearth Furnace"
             width={900}
             height={1200}
@@ -507,8 +509,6 @@ export default function LandingPage() {
     "Strong, durable construction designed for continuous industrial use — not seasonal or light-duty applications",
 
     "Flexible — tailored for different capacities, heating modes, and atmospheric requirements per your process",
-
-    "Proven performance across steel plants, foundries, forging units, and fabrication workshops across India",
   ].map((item, i) => (
     <div
       key={i}
@@ -574,11 +574,6 @@ export default function LandingPage() {
         title: "Heat Treatment Contractors",
         desc: "Batch jobs for multiple clients — flexible capacity configurations",
       },
-      {
-        icon: Drill,
-        title: "Tool Rooms & Precision Engineering",
-        desc: "Large dies, jigs, moulds requiring controlled heat treatment",
-      },
       ].map((item, i) => (
         <div
           key={i}
@@ -604,97 +599,6 @@ export default function LandingPage() {
           </div>
         </div>
       ))}
-    </div>
-  </div>
-</section>
-
-{/* SECTION 9 — TRUST & CREDENTIALS */}
-<section className="py-24 bg-white w-full">
-  <div className="container mx-auto max-w-7xl px-4">
-
-    {/* HEADING */}
-    <h2 className="max-w-5xl mx-auto text-center text-3xl md:text-4xl font-bold leading-tight text-primary">
-      Trust & Credentials
-    </h2>
-
-    {/* MAIN GRID */}
-    <div className="mt-20 grid grid-cols-1 gap-10 lg:grid-cols-[34%_66%] items-start">
-
-      {/* LEFT STAT BADGES */}
-      <div className="space-y-5">
-        {[
-        {
-          icon: Trophy,
-          title: "Years in Operation",
-          value: "35+ Since 1987",
-        },
-        {
-          icon: BadgeCheck,
-          title: "Quality Certification",
-          value: "ISO 9001:2015 Certified",
-        },
-        {
-          icon: Leaf,
-          title: "Environmental",
-          value: "ISO 14001:2015 Certified",
-        },
-        {
-          icon: MapPin,
-          title: "Manufacturing Base",
-          value: "Faridabad, Haryana — Pan-India Installation",
-        },
-        ].map((item, i) => (
-          <div
-            key={i}
-            className="rounded-3xl border border-slate-200 bg-slate-50 p-6 shadow-lg"
-          >
-            <div className="flex items-start gap-4">
-
-              {/* ICON */}
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10">
-                <item.icon className="h-7 w-7 text-primary" strokeWidth={2.2} />
-              </div>
-
-              {/* CONTENT */}
-              <div className="space-y-1">
-                <h3 className="text-lg font-bold leading-snug text-primary">
-                  {item.title}
-                </h3>
-
-                <p className="text-base leading-relaxed text-slate-700">
-                  {item.value}
-                </p>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* RIGHT IMAGE + CAPTION */}
-      <div className="space-y-6 max-w-4xl">
-
-        {/* IMAGE */}
-        <div className="overflow-hidden rounded-3xl border border-slate-200 shadow-2xl">
-          <Image
-            src={DEFAULT_PLACEHOLDER}
-            alt="Continental Furnaces Manufacturing Facility"
-            width={1600}
-            height={900}
-            className="h-[420px] w-full object-cover"
-          />
-        </div>
-
-        {/* TEXT BELOW IMAGE */}
-        <div className="space-y-4">
-          <p className="text-base leading-relaxed text-slate-700 italic">
-            "Every Continental Bogie Hearth Furnace is engineered, fabricated, and tested at our Faridabad manufacturing facility before dispatch — with full installation and commissioning support at your plant."
-          </p>
-
-          <p className="text-lg font-semibold text-primary">
-            — Continental Furnaces, Since 1987
-          </p>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -732,23 +636,6 @@ export default function LandingPage() {
       <div className="w-full">
         <LeadForm />
       </div>
-    </div>
-
-    {/* CONTACT BLOCK */}
-    <div className="mt-20 rounded-3xl border border-slate-300 bg-white p-8 md:p-10 text-center shadow-xl">
-      <h3 className="text-2xl font-bold text-primary">
-        Continental Furnaces
-      </h3>
-
-      <p className="mt-5 text-base md:text-lg leading-relaxed text-slate-700 max-w-3xl mx-auto">
-        Plot No. 34, New DLF Industrial Area,
-        Faridabad, Haryana, India
-        <br />
-        <br />
-         info@confur.net | confur.india@gmail.com
-        <br />
-         www.confur.net
-      </p>
     </div>
   </div>
 </section>
