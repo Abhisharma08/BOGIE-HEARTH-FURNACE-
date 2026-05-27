@@ -35,8 +35,8 @@ import SectionHeader from "@/components/SectionHeader"
 const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779361354/cropped-Continental-Furnaces-Logo_q8ict4.jpg"
 const HERO_BG_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779695000/WhatsApp_Image_2026-05-21_at_11.22.03_1_mpxnyo.jpg"
 const DEFAULT_PLACEHOLDER = "https://picsum.photos/seed/furnace/1200/900"
-const Img1_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779694498/WhatsApp_Image_2026-05-21_at_11.19.57_pdjsoi.jpg"
-const Img2_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779694675/WhatsApp_Image_2026-05-21_at_11.19.56_2_wfbunz.jpg"
+const Img1_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779875693/Bogie-Hearth-Furnace-_-Industrial-Heat-Treatment-for-Oversized-Parts_jehybr.jpg"
+const Img2_SRC = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779875956/WhatsApp_Image_2026-05-21_at_11.19.56_2_yia0eh.jpg"
 
 export default function LandingPage() {
   const scrollToLeadForm = () => {
@@ -194,6 +194,57 @@ export default function LandingPage() {
       </div>
     </section>
 
+{/* SECTION 3 — PROBLEM (Pain Points) */}
+<section className="relative overflow-hidden bg-slate-200 py-24 w-full">
+  {/* Background Grid */}
+  <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:60px_60px]" />
+
+  <div className="container relative z-10 mx-auto max-w-7xl px-4">
+    
+    {/* HEADING */}
+    <h2 className="max-w-5xl mx-auto text-center text-3xl md:text-4xl font-bold leading-tight text-primary">
+      Is Your Current Heat Treatment Process Causing These Problems?
+    </h2>
+
+    {/* CARDS */}
+    <div className="mt-14 grid grid-cols-1 gap-7 lg:grid-cols-3">
+      {[
+        {
+          title: "Loading & Handling Nightmare",
+          desc: "Large castings, heavy fabrications, and forged components cannot be loaded into fixed-chamber furnaces without damaging the charge or risking operator safety. Every loading becomes a bottleneck.",
+        },
+        {
+          title: "Temperature Non-Uniformity = Rejected Parts",
+          desc: "Hotspots and cold zones in standard furnaces cause inconsistent stress relieving and annealing results — leading to part rejections, rework costs, and quality audit failures on critical components.",
+        },
+        {
+          title: "High Operating Costs, No Process Records",
+          desc: "Poorly insulated, older furnaces waste 25–35% of fuel every cycle. Without digital PLC control and thermocouple-based logging, there is no traceability, no energy monitoring, and no data for quality certification.",
+        },
+      ].map((item, i) => (
+        <Card
+          key={i}
+          className="rounded-3xl border border-white/10 bg-slate-700 shadow-2xl"
+        >
+          <CardContent className="p-8 space-y-5">
+            <div className="h-1.5 w-20 rounded-full bg-primary" />
+
+            <h3 className="text-2xl font-bold leading-snug text-white">
+              {item.title}
+            </h3>
+
+            <p className="text-lg leading-relaxed text-white/80 italic">
+              {item.desc}
+            </p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
+
+
     {/* SECTION 2 — PRODUCT INTRODUCTION */}
 <section className="py-24 bg-white w-full">
   <div className="container mx-auto max-w-7xl px-4">
@@ -241,55 +292,6 @@ export default function LandingPage() {
           </p>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-
-{/* SECTION 3 — PROBLEM (Pain Points) */}
-<section className="relative overflow-hidden bg-slate-200 py-24 w-full">
-  {/* Background Grid */}
-  <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(rgba(255,255,255,0.4)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.4)_1px,transparent_1px)] bg-[size:60px_60px]" />
-
-  <div className="container relative z-10 mx-auto max-w-7xl px-4">
-    
-    {/* HEADING */}
-    <h2 className="max-w-5xl mx-auto text-center text-3xl md:text-4xl font-bold leading-tight text-primary">
-      Is Your Current Heat Treatment Process Causing These Problems?
-    </h2>
-
-    {/* CARDS */}
-    <div className="mt-14 grid grid-cols-1 gap-7 lg:grid-cols-3">
-      {[
-        {
-          title: "Loading & Handling Nightmare",
-          desc: "Large castings, heavy fabrications, and forged components cannot be loaded into fixed-chamber furnaces without damaging the charge or risking operator safety. Every loading becomes a bottleneck.",
-        },
-        {
-          title: "Temperature Non-Uniformity = Rejected Parts",
-          desc: "Hotspots and cold zones in standard furnaces cause inconsistent stress relieving and annealing results — leading to part rejections, rework costs, and quality audit failures on critical components.",
-        },
-        {
-          title: "High Operating Costs, No Process Records",
-          desc: "Poorly insulated, older furnaces waste 25–35% of fuel every cycle. Without digital PLC control and thermocouple-based logging, there is no traceability, no energy monitoring, and no data for quality certification.",
-        },
-      ].map((item, i) => (
-        <Card
-          key={i}
-          className="rounded-3xl border border-white/10 bg-slate-700 shadow-2xl"
-        >
-          <CardContent className="p-8 space-y-5">
-            <div className="h-1.5 w-20 rounded-full bg-primary" />
-
-            <h3 className="text-2xl font-bold leading-snug text-white">
-              {item.title}
-            </h3>
-
-            <p className="text-lg leading-relaxed text-white/80 italic">
-              {item.desc}
-            </p>
-          </CardContent>
-        </Card>
-      ))}
     </div>
   </div>
 </section>
@@ -392,10 +394,10 @@ export default function LandingPage() {
     </h2>
 
     {/* MAIN GRID */}
-    <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[65%_35%] items-start">
+    <div className="mt-14 grid grid-cols-1 gap-12 lg:grid-cols-[65%_35%] items-stretch">
 
       {/* LEFT TABLE */}
-      <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-700 shadow-2xl">
+      <div className="overflow-hidden rounded-3xl border border-white/10 bg-slate-700 shadow-2xl h-full">
         <table className="w-full text-left">
           <tbody>
             {[
@@ -454,7 +456,7 @@ export default function LandingPage() {
       </div>
 
       {/* RIGHT IMAGE + CTA */}
-      <div className="relative space-y-6">
+      <div className="relative flex flex-col h-full">
 
         {/* MOBILE CTA */}
         <div className="lg:hidden">
@@ -464,7 +466,7 @@ export default function LandingPage() {
         </div>
 
         {/* IMAGE */}
-        <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl">
+        <div className="overflow-hidden rounded-3xl border border-white/10 shadow-2xl flex-1">
           <Image
             src={Img2_SRC}
             alt="Continental Bogie Hearth Furnace"
@@ -475,11 +477,11 @@ export default function LandingPage() {
         </div>
 
         {/* DESKTOP CTA */}
-        <div className="hidden lg:block">
+        {/* <div className="hidden lg:block">
           <Button className="h-14 rounded-xl bg-primary px-8 text-base font-bold text-white hover:bg-primary/90">
-            Download Full Technical Datasheet →
+            Download dFull Technical Datasheet →
           </Button>
-        </div>
+        </div> */}
       </div>
     </div>
   </div>
