@@ -31,7 +31,7 @@ const defaultValues: FormValues = {
   name: "",
   email: "",
   phone: "",
-  lead_source: "Aluminium Furnace LP",
+  lead_source: "BOGIE HEARTH FURNACE LP",
 }
 
 function validateForm(values: FormValues) {
