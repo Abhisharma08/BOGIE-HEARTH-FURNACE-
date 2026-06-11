@@ -67,7 +67,7 @@ export default function ThankYouPage() {
           <div className="pt-6 border-t space-y-6">
             <div className="flex justify-center">
               <Link href="/">
-                <Button variant="outline" className="gap-2 border-primary text-white hover:bg-primary/5">
+                <Button variant="outline" className="gap-2 border-primary text-white">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Homepage
                 </Button>
