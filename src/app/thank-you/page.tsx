@@ -9,32 +9,32 @@ const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779361354/
 export default function ThankYouPage() {
   return (
     <div
-  className="min-h-screen flex flex-col overflow-x-hidden bg-cover bg-center bg-no-repeat"
-  style={{
-    backgroundImage:
-      "url('https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779692266/WhatsApp_Image_2026-05-21_at_11.22.00_1_xr59xu.jpg')",
-  }}
->
+      className="min-h-screen flex flex-col overflow-x-hidden bg-cover bg-center bg-no-repeat"
+      style={{
+        backgroundImage:
+          "url('https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779692266/WhatsApp_Image_2026-05-21_at_11.22.00_1_xr59xu.jpg')",
+      }}
+    >
       {/* Google Tag Manager (noscript) */}
       <noscript>
-        <iframe 
+        <iframe
           src="https://www.googletagmanager.com/ns.html?id=GTM-KWNWGTH9"
-          height="0" 
-          width="0" 
+          height="0"
+          width="0"
           style={{ display: 'none', visibility: 'hidden' }}
         />
       </noscript>
       {/* End Google Tag Manager (noscript) */}
-      
+
       {/* Simple Header */}
       <nav className="bg-white border-b h-20 flex items-center w-full">
         <div className="container mx-auto px-4 max-w-7xl w-full">
-          <a href="/bogie-hearth-furnace/">
-            <Image 
-              src={LOGO_URL} 
-              alt="Continental Furnaces Logo" 
-              width={180} 
-              height={45} 
+          <a href="https://queries.confur.net/bogie-hearth-furnace">
+            <Image
+              src={LOGO_URL}
+              alt="Continental Furnaces Logo"
+              width={180}
+              height={45}
               className="h-10 w-auto object-contain"
               priority
             />
@@ -49,7 +49,7 @@ export default function ThankYouPage() {
               <CheckCircle2 className="h-16 w-16 text-green-600" />
             </div>
           </div>
-          
+
           <div className="space-y-4">
             <h1 className="text-3xl md:text-4xl font-headline text-primary">Query Received!</h1>
             <p className="text-lg text-muted-foreground">
