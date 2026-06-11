@@ -67,7 +67,7 @@ export default function ThankYouPage() {
           <div className="pt-6 border-t space-y-6">
             <div className="flex justify-center">
               <Button asChild variant="outline" className="gap-2 border-primary text-white">
-                <a href="/bogie-hearth-furnace/" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium">
+                <a href="/" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Homepage
                 </a>
