@@ -29,7 +29,7 @@ export default function ThankYouPage() {
       {/* Simple Header */}
       <nav className="bg-white border-b h-20 flex items-center w-full">
         <div className="container mx-auto px-4 max-w-7xl w-full">
-          <Link href="/">
+          <Link href="/bogie-hearth-furnace">
             <Image 
               src={LOGO_URL} 
               alt="Continental Furnaces Logo" 
@@ -66,12 +66,12 @@ export default function ThankYouPage() {
 
           <div className="pt-6 border-t space-y-6">
             <div className="flex justify-center">
-              <Link href="/" asChild>
-                <a className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium border border-input bg-background text-foreground hover:bg-muted transition-colors border-primary text-white">
+              <Button asChild variant="outline" className="gap-2 border-primary text-white">
+                <Link href="/bogie-hearth-furnace" className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Homepage
-                </a>
-              </Link>
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
