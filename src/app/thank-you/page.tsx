@@ -8,7 +8,13 @@ const LOGO_URL = "https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779361354/
 
 export default function ThankYouPage() {
   return (
-    <div className="min-h-screen flex flex-col bg-muted/30 overflow-x-hidden">
+    <div
+  className="min-h-screen flex flex-col overflow-x-hidden bg-cover bg-center bg-no-repeat"
+  style={{
+    backgroundImage:
+      "url('https://res.cloudinary.com/dw9v7jjrq/image/upload/v1779692266/WhatsApp_Image_2026-05-21_at_11.22.00_1_xr59xu.jpg')",
+  }}
+>
       {/* Google Tag Manager (noscript) */}
       <noscript>
         <iframe 
