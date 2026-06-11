@@ -66,11 +66,11 @@ export default function ThankYouPage() {
 
           <div className="pt-6 border-t space-y-6">
             <div className="flex justify-center">
-              <Link href="/">
-                <Button variant="outline" className="gap-2 border-primary text-white">
+              <Link href="/" asChild>
+                <a className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-sm font-medium border border-input bg-background text-foreground hover:bg-muted transition-colors border-primary text-white">
                   <ArrowLeft className="h-4 w-4" />
                   Back to Homepage
-                </Button>
+                </a>
               </Link>
             </div>
           </div>
