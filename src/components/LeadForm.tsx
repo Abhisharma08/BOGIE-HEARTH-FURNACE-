@@ -32,7 +32,11 @@ const defaultValues: FormValues = {
   name: "",
   email: "",
   phone: "",
+<<<<<<< HEAD
   lead_source: "BOGIE MELTING FURNACE LP",
+=======
+  lead_source: "BOGIE HEARTH FURNACE LP",
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
 }
 
 function validateForm(values: FormValues) {

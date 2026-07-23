@@ -6,7 +6,10 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+<<<<<<< HEAD
 import ProductsSection from "@/components/ProductsSection";
+=======
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
 import {
   ShieldCheck,
   Flame,
@@ -161,7 +164,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             {/* Main Heading */}
             <div className="space-y-5">
               <h1 className="max-w-5xl text-3xl font-bold leading-[1.05] tracking-tight text-white md:text-4xl">
+<<<<<<< HEAD
               Bogie Melting Furnace — 
+=======
+              Bogie Hearth Furnace — 
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
               <br /> India's Most Reliable Car-Bottom Furnace for Heavy Heat Treatment
               </h1>
 
@@ -292,7 +299,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <div className="space-y-8">
         {/* HEADING */}
         <h2 className="text-3xl md:text-4xl font-bold leading-tight text-primary">
+<<<<<<< HEAD
           What Is a Bogie Melting Furnace — And Why Do Heavy Industries Rely on It?
+=======
+          What Is a Bogie Hearth Furnace — And Why Do Heavy Industries Rely on It?
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
         </h2>
 
         {/* BODY */}
@@ -320,9 +331,12 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
   </div>
 </section>
+<<<<<<< HEAD
 {/* Product Introduction */}
 
 <ProductsSection />
+=======
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
 
 {/* SECTION 4 — KEY FEATURES */}
 <section className="py-24 bg-white w-full">
@@ -330,7 +344,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     {/* HEADING */}
     <h2 className="max-w-5xl mx-auto text-center text-3xl md:text-4xl font-bold leading-tight text-primary">
+<<<<<<< HEAD
       Continental aluminum melting furnaces— 6 Engineering Advantages Built Into Every Unit
+=======
+      Continental Bogie Hearth Furnace — 6 Engineering Advantages Built Into Every Unit
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
     </h2>
 
     {/* FEATURES GRID */}
@@ -648,7 +666,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         </div>
 
         <h2 className="text-3xl md:text-4xl font-bold text-primary leading-tight">
+<<<<<<< HEAD
           Need a Bogie Melting Furnace for Your Plant? Tell Us Your Requirement.
+=======
+          Need a Bogie Hearth Furnace for Your Plant? Tell Us Your Requirement.
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
         </h2>
 
         <p className="text-lg text-black max-w-2xl leading-relaxed">

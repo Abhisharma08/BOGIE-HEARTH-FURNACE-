@@ -1,7 +1,11 @@
 import type {NextConfig} from 'next';
 
 const nextConfig: NextConfig = {
+<<<<<<< HEAD
   basePath: '/heat-treatment-furnaces',
+=======
+  basePath: '/bogie-hearth-furnace',
+>>>>>>> e4d0f9664cab319f6892cea503f7db3a91570d02
   skipTrailingSlashRedirect: true,
   typescript: {
     ignoreBuildErrors: true,
