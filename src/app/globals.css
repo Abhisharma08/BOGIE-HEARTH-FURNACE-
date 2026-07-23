@@ -1,0 +1,367 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================================
+   ROOT THEME TOKENS
+========================================= */
+
+@layer base {
+  :root {
+    /* Core Theme */
+    --background: 0 0% 5%; /* #0D0D0D */
+    --foreground: 36 22% 93%; /* #F0EEE8 */
+
+    /* Surface System */
+    --card: 240 9% 11%; /* #1A1A1F */
+    --card-foreground: 36 22% 93%;
+
+    --popover: 240 9% 11%;
+    --popover-foreground: 36 22% 93%;
+
+    /* Brand */
+    --primary: 24 100% 45%; /* #E85D00 */
+    --primary-foreground: 36 22% 93%;
+
+    --secondary: 39 91% 55%; /* #F5A623 */
+    --secondary-foreground: 0 0% 5%;
+
+    /* Accent */
+    --accent: 24 100% 45%;
+    --accent-foreground: 36 22% 93%;
+
+    /* Muted */
+    --muted: 240 8% 18%;
+    --muted-foreground: 0 0% 54%; /* #8A8A8A */
+
+    /* Inputs / Borders */
+    --border: 240 9% 20%; /* #2C2C35 */
+    --input: 240 9% 20%;
+
+    /* Ring */
+    --ring: 24 100% 45%;
+
+    /* Destructive */
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 36 22% 93%;
+
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-scroll-behavior: smooth;
+  }
+
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  ::selection {
+    background: #e85d00;
+    color: #f0eee8;
+  }
+}
+
+/* =========================================
+   BASE ELEMENTS
+========================================= */
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+
+    font-feature-settings: "ss01", "ss02", "cv01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* =========================================
+     TYPOGRAPHY
+  ========================================= */
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-headline uppercase text-foreground;
+
+    letter-spacing: 0.02em;
+    line-height: 0.95;
+    font-weight: 400;
+  }
+
+h1 {
+  @apply text-5xl md:text-7xl xl:text-[5.5rem];
+}
+h2 {
+  @apply text-4xl md:text-6xl;
+}
+
+h3 {
+  @apply text-3xl md:text-4xl;
+}
+
+  h4 {
+    @apply text-3xl;
+  }
+
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+
+  label {
+    @apply text-[11px] uppercase tracking-[0.15em] font-mono text-muted-foreground;
+  }
+
+  small {
+    @apply font-mono uppercase tracking-[0.12em];
+  }
+
+  /* =========================================
+     LINKS
+  ========================================= */
+
+  a {
+    @apply transition-colors duration-200;
+  }
+
+  /* =========================================
+     BUTTONS
+  ========================================= */
+
+  button {
+    touch-action: manipulation;
+    -webkit-user-select: none;
+    user-select: none;
+    min-height: 48px;
+  }
+
+  @media (max-width: 768px) {
+    button {
+      min-height: 52px;
+      min-width: 52px;
+    }
+  }
+
+  /* =========================================
+     FORMS
+  ========================================= */
+
+  input,
+  textarea,
+  select {
+    @apply bg-card border border-border text-foreground;
+
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease,
+      background 0.2s ease;
+  }
+
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+
+    border-color: #e85d00;
+
+    box-shadow:
+      0 0 0 1px #e85d00,
+      0 0 24px rgba(232, 93, 0, 0.18);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #8a8a8a;
+  }
+
+  /* =========================================
+     MEDIA
+  ========================================= */
+
+  img {
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+}
+
+/* =========================================
+   COMPONENT LAYER
+========================================= */
+
+@layer components {
+  .container {
+    @apply max-w-[1440px] mx-auto px-[5vw];
+  }
+
+  /* =========================================
+     SECTION LABEL
+  ========================================= */
+
+  .section-label {
+    @apply inline-flex items-center gap-4 font-mono uppercase tracking-[0.15em] text-primary text-[11px];
+  }
+
+  .section-label::before {
+    content: "";
+
+    width: 32px;
+    height: 1px;
+
+    background: #e85d00;
+
+    display: block;
+  }
+
+  /* =========================================
+     INDUSTRIAL CARD
+  ========================================= */
+
+  .industrial-card {
+    @apply bg-card border border-border rounded-md;
+
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .industrial-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+      0 16px 48px rgba(0, 0, 0, 0.45),
+      0 0 32px rgba(232, 93, 0, 0.12);
+
+    border-color: rgba(232, 93, 0, 0.35);
+  }
+
+  /* =========================================
+     ORANGE GLOW
+  ========================================= */
+
+  .orange-glow {
+    box-shadow:
+      0 0 40px rgba(232, 93, 0, 0.18),
+      0 0 80px rgba(245, 166, 35, 0.08);
+  }
+
+  /* =========================================
+     GLASS OVERLAY
+  ========================================= */
+
+  .glass-dark {
+    background: rgba(26, 26, 31, 0.72);
+
+    backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  /* =========================================
+     HERO OVERLAY
+  ========================================= */
+
+  .hero-overlay {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(13, 13, 13, 0.92) 0%,
+        rgba(13, 13, 13, 0.72) 45%,
+        rgba(13, 13, 13, 0.55) 100%
+      );
+  }
+
+  /* =========================================
+     INDUSTRIAL GRID
+  ========================================= */
+
+  .industrial-grid {
+    background-image:
+      linear-gradient(
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.03) 1px,
+        transparent 1px
+      );
+
+    background-size: 48px 48px;
+  }
+}
+
+/* =========================================
+   UTILITIES
+========================================= */
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-bottom {
+    mask-image: linear-gradient(
+      to bottom,
+      black 80%,
+      transparent 100%
+    );
+  }
+
+  .mask-fade-top {
+    mask-image: linear-gradient(
+      to top,
+      black 80%,
+      transparent 100%
+    );
+  }
+}
+
+/* =========================================
+   SCROLLBAR
+========================================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2c2c35;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e85d00;
+}
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+  }
+}
